@@ -1,23 +1,57 @@
-/* postcss */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Base styling for dark premium theme */
+/* -- Global CSS Variables -- */
 :root {
   --bg: #0b1220;
   --muted: #94a3b8;
   --card: rgba(255,255,255,0.03);
+  --accent: #fcd34d; /* Using a vibrant, gold-like yellow for the accent */
 }
 
-html, body, #root { height: 100%; }
-
-body { background-color: var(--bg); }
-
-.card {
-  @apply bg-white/40 rounded-2xl p-6 shadow-lg border border-white/5;
+html, body, #root {
+  height: 100%;
 }
-/* Accent utilities */
-.text-accent { color: theme('colors.accent'); }
-.bg-accent { background-color: theme('colors.accent'); color: #000; }
-.border-accent { border-color: theme('colors.accent'); }
+
+body {
+  background-color: var(--bg);
+  /* Apply a smooth background color transition for a premium feel */
+  transition: background-color 0.3s ease;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: #e2e8f0; /* Soft white for readability */
+}
+
+/* -- Components Layer -- */
+@layer components {
+  .card {
+    /* Refine the card styles for a cleaner, more elevated look */
+    @apply bg-white/5 rounded-2xl p-6 shadow-xl border border-white/10 backdrop-blur-sm;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .card:hover {
+    @apply scale-105 shadow-2xl;
+  }
+}
+
+/* -- Utilities Layer -- */
+@layer utilities {
+  .text-accent {
+    color: var(--accent);
+  }
+  
+  .bg-accent {
+    background-color: var(--accent);
+    color: #000;
+  }
+  
+  .border-accent {
+    border-color: var(--accent);
+  }
+  
+  .bg-hero-gradient {
+    /* Use a more subtle, radial gradient for the background */
+    background: radial-gradient(circle, rgba(11, 18, 32, 0.6) 0%, rgba(11, 18, 32, 1) 100%);
+  }
+}

@@ -1,10 +1,17 @@
 import React from 'react'
-import { createRoot } from 'react-dom/client'
+import ReactDOM from 'react-dom/client'
 import App from './App'
-import './styles.css'
+import { BrowserRouter } from 'react-router-dom'
+import './styles.css' 
 
-createRoot(document.getElementById('root')).render(
+// For GitHub Pages + local dev
+const baseName = '/';
+
+
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter basename={baseName}>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 )

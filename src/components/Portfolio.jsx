@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 
 const items = [
-  { id: 1, title: 'Staircase in SS', img: '/portfolio1.jpg' },
-  { id: 2, title: 'Industrial Platform', img: '/portfolio2.jpg' },
-  { id: 3, title: 'Custom Gate', img: '/portfolio3.jpg' },
-  { id: 4, title: 'Railing & Balcony', img: '/portfolio4.jpg' },
-]
+  { id: 1, title: 'Staircase in SS', img: `${import.meta.env.BASE_URL}portfolio1.jpg` },
+  { id: 2, title: 'Industrial Platform', img: `${import.meta.env.BASE_URL}portfolio2.jpg` },
+  { id: 3, title: 'Custom Gate', img: `${import.meta.env.BASE_URL}portfolio3.jpg` },
+  { id: 4, title: 'Railing & Balcony', img: `${import.meta.env.BASE_URL}portfolio4.jpg` },
+];
+
 
 export default function Portfolio({ whatsapp }) {
   const [open, setOpen] = useState(null)
