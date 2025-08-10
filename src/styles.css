@@ -7,8 +7,8 @@
   --bg: #0b1220;
   --muted: #94a3b8;
   --card: rgba(255,255,255,0.03);
-  --accent: #FFD700; /* A brighter, more vibrant gold color */
-  --accent-dark: #b28704; /* Darker gold for shadows or hover */
+  --accent: #FFC107; /* A bright, vibrant yellow color */
+  --accent-dark: #b28704; /* Darker yellow for shadows or hover */
   --text-main: #e2e8f0; /* Soft white */
   --text-muted: #94a3b8;
 }
@@ -88,14 +88,14 @@ body {
   }
   
   .bg-accent {
-    background: linear-gradient(145deg, #FFD700, #DAA520, #B8860B);
+    background-color: var(--accent);
     color: #000;
-    transition: transform 0.2s ease;
+    transition: background-color 0.2s ease;
   }
   
   .bg-accent:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4);
+    background-color: var(--accent-dark);
+    box-shadow: 0 4px 10px rgba(255, 193, 7, 0.4);
   }
   
   .border-accent {
