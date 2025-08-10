@@ -14,13 +14,13 @@ const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}
 export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-primary to-black text-white">
-      <header className="backdrop-blur-md sticky top-0 z-40 bg-black/40 border-b border-white/6">
+      <header className="backdrop-blur-md sticky top-0 z-40 bg-black border-b border-white/6">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center text-black font-bold">FB</div>
+          <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center text-black font-bold">RMS</div>
             <div>
-              <div className="font-semibold">Fabrication Co.</div>
-              <div className="text-xs text-gray-300">Custom metal & steel works</div>
+              <div className="font-semibold">RM Services.</div>
+              <div className="text-xs text-gray-300">Crafted with Precision. Built to Last.</div>
             </div>
           </Link>
 
