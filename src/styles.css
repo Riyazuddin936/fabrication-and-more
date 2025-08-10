@@ -1,0 +1,23 @@
+/* postcss */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styling for dark premium theme */
+:root {
+  --bg: #0b1220;
+  --muted: #94a3b8;
+  --card: rgba(255,255,255,0.03);
+}
+
+html, body, #root { height: 100%; }
+
+body { background-color: var(--bg); }
+
+.card {
+  @apply bg-white/40 rounded-2xl p-6 shadow-lg border border-white/5;
+}
+/* Accent utilities */
+.text-accent { color: theme('colors.accent'); }
+.bg-accent { background-color: theme('colors.accent'); color: #000; }
+.border-accent { border-color: theme('colors.accent'); }
